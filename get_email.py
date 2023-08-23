@@ -9,3 +9,11 @@ def get_email(data:dict) -> list:
     Returns:
         list: users email
     """
+    emails = []
+    results = data['results']
+    for user in results:
+        user_email = user['email']
+        emails.append(user_email)
+    return emails
+# open file
+print(get_email(get_data.get_data('randomuser_data.json')))
